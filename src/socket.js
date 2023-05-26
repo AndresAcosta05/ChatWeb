@@ -31,7 +31,7 @@ module.exports = (io) =>{
                 return;
             }else{
                 nickNames.splice(nickNames.indexOf(socket.nickname), 1);
-                io.socket.emit('nombre usuario', nickNames);
+                io.sockets.emit('nombre usuario', nickNames);
             }
         });
     })
